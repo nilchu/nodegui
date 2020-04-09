@@ -26,16 +26,19 @@ class DLL_EXPORT QTreeWidgetWrap : public Napi::ObjectWrap<QTreeWidgetWrap> {
   static Napi::FunctionReference constructor;
 
   Napi::Value addTopLevelItem(const Napi::CallbackInfo &info);
+  Napi::Value addTopLevelItems(const Napi::CallbackInfo &info);
+  Napi::Value insertTopLevelItem(const Napi::CallbackInfo &info);
+  Napi::Value insertTopLevelItems(const Napi::CallbackInfo &info);
   Napi::Value selectedItems(const Napi::CallbackInfo &info);
   Napi::Value setColumnCount(const Napi::CallbackInfo &info);
   Napi::Value setHeaderLabel(const Napi::CallbackInfo &info);
   Napi::Value setHeaderLabels(const Napi::CallbackInfo &info);
   Napi::Value setItemWidget(const Napi::CallbackInfo &info);
   Napi::Value currentItem(const Napi::CallbackInfo &info);
+  Napi::Value findItems(const Napi::CallbackInfo &info);
+  Napi::Value takeTopLevelItem(const Napi::CallbackInfo &info);
+  Napi::Value clear(const Napi::CallbackInfo &info);
 
-  // Napi::Value addTopLevelItems(const Napi::CallbackInfo& info);
   // Napi::Value setHorizontalScrollBarPolicy(const Napi::CallbackInfo& info);
   // Napi::Value setVerticalScrollBarPolicy(const Napi::CallbackInfo& info);
-  // Napi::Value takeTopLevelItem(const Napi::CallbackInfo& info);
-  // Napi::Value findItems(const Napi::CallbackInfo& info);
 };

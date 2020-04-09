@@ -4,6 +4,7 @@ import './lib/core/bootstrap';
 export * from './lib/QtEnums';
 // Gui:
 export { QApplication } from './lib/QtGui/QApplication';
+export { QBrush } from './lib/QtGui/QBrush';
 export { QKeySequence } from './lib/QtGui/QKeySequence';
 export { QPicture } from './lib/QtGui/QPicture';
 export { QPixmap, ImageFormats } from './lib/QtGui/QPixmap';
@@ -21,7 +22,7 @@ export { QMouseEvent } from './lib/QtGui/QEvent/QMouseEvent';
 export { WidgetEventTypes } from './lib/core/EventWidget';
 // Abstract:
 export { NodeWidget, QWidget, QWidgetSignals } from './lib/QtWidgets/QWidget';
-export { NodeLayout, QLayoutSignals } from './lib/QtWidgets/QLayout';
+export { NodeLayout, QLayoutSignals, SizeConstraint } from './lib/QtWidgets/QLayout';
 export { QAbstractScrollArea } from './lib/QtWidgets/QAbstractScrollArea';
 export { QAbstractSlider, QAbstractSliderSignals } from './lib/QtWidgets/QAbstractSlider';
 export { QAbstractButton, QAbstractButtonSignals } from './lib/QtWidgets/QAbstractButton';
@@ -36,23 +37,39 @@ export {
 // Widgets:
 export { QCalendarWidget, QCalendarWidgetSignals } from './lib/QtWidgets/QCalendarWidget';
 export { QCheckBox, QCheckBoxSignals } from './lib/QtWidgets/QCheckBox';
+export { QColorDialog, QColorDialogSignals } from './lib/QtWidgets/QColorDialog';
 export { QDateEdit } from './lib/QtWidgets/QDateEdit';
 export { QDateTimeEdit, NodeDateTimeEdit, QDateTimeEditSignals } from './lib/QtWidgets/QDateTimeEdit';
 export { QLabel, QLabelSignals } from './lib/QtWidgets/QLabel';
+export { QLCDNumber, QLCDNumberSignals, Mode, SegmentStyle } from './lib/QtWidgets/QLCDNumber';
 export { QDial, QDialSignals } from './lib/QtWidgets/QDial';
+export { QDoubleSpinBox, QDoubleSpinBoxSignals } from './lib/QtWidgets/QDoubleSpinBox';
+export { QErrorMessage, QErrorMessageSignals } from './lib/QtWidgets/QErrorMessage';
 export { QFileDialog, QFileDialogSignals } from './lib/QtWidgets/QFileDialog';
+export { QFontDialog, QFontDialogSignals, FontDialogOption } from './lib/QtWidgets/QFontDialog';
 export { QFrame, QFrameSignals, Shadow, Shape } from './lib/QtWidgets/QFrame';
 export { QLineEdit, QLineEditSignals, EchoMode } from './lib/QtWidgets/QLineEdit';
 export { QMainWindow, QMainWindowSignals } from './lib/QtWidgets/QMainWindow';
 export { QProgressBar, QProgressBarSignals, QProgressBarDirection } from './lib/QtWidgets/QProgressBar';
+export { QProgressDialog, QProgressDialogSignals } from './lib/QtWidgets/QProgressDialog';
 export { QComboBox, QComboBoxSignals, InsertPolicy } from './lib/QtWidgets/QComboBox';
 export { QPushButton, QPushButtonSignals } from './lib/QtWidgets/QPushButton';
 export { QToolButton, QToolButtonSignals, ToolButtonPopupMode } from './lib/QtWidgets/QToolButton';
 export { QSpinBox, QSpinBoxSignals } from './lib/QtWidgets/QSpinBox';
 export { QRadioButton, QRadioButtonSignals } from './lib/QtWidgets/QRadioButton';
 export { QStackedWidget, QStackedWidgetSignals } from './lib/QtWidgets/QStackedWidget';
+export {
+    QListView,
+    QListViewSignals,
+    Flow,
+    LayoutMode,
+    Movement,
+    ResizeMode,
+    ViewMode,
+} from './lib/QtWidgets/QListView';
 export { QListWidget, QListWidgetSignals } from './lib/QtWidgets/QListWidget';
 export { QListWidgetItem } from './lib/QtWidgets/QListWidgetItem';
+export { QTabBar, QTabBarSignals, ButtonPosition, SelectionBehavior, TabBarShape } from './lib/QtWidgets/QTabBar';
 export { QTabWidget, QTabWidgetSignals } from './lib/QtWidgets/QTabWidget';
 export { QTableView, QTableViewSignals } from './lib/QtWidgets/QTableView';
 export { QTableWidget, QTableWidgetSignals } from './lib/QtWidgets/QTableWidget';
@@ -82,6 +99,16 @@ export { QAction, QActionSignals } from './lib/QtWidgets/QAction';
 export { QShortcut, QShortcutSignals } from './lib/QtWidgets/QShortcut';
 export { QGroupBox, QGroupBoxSignals } from './lib/QtWidgets/QGroupBox';
 export { QStatusBar, QStatusBarSignals } from './lib/QtWidgets/QStatusBar';
+export { QStandardItemModel, QStandardItemModelSignals } from './lib/QtWidgets/QStandardItemModel';
+export { QStandardItem } from './lib/QtWidgets/QStandardItem';
+export { QTextBrowser, QTextBrowserSignals } from './lib/QtWidgets/QTextBrowser';
+export {
+    QTextEdit,
+    QTextEditSignals,
+    AutoFormattingFlag,
+    QTextEditLineWrapMode,
+    WrapMode,
+} from './lib/QtWidgets/QTextEdit';
 // Core
 export { QDate } from './lib/QtCore/QDate';
 export { QDateTime } from './lib/QtCore/QDateTime';

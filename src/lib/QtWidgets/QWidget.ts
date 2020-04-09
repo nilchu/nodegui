@@ -9,11 +9,13 @@ import { CursorShape, WindowState } from '../QtEnums';
 import { StyleSheet, prepareInlineStyleSheet } from '../core/Style/StyleSheet';
 import { checkIfNativeElement } from '../utils/helpers';
 import { YogaWidget } from '../core/YogaWidget';
+import { QPoint } from '../QtCore/QPoint';
 import { QSize } from '../QtCore/QSize';
 import { QRect } from '../QtCore/QRect';
 import { QObjectSignals } from '../QtCore/QObject';
 import { QFont } from '../QtGui/QFont';
 import { QAction } from './QAction';
+import memoizeOne from 'memoize-one';
 
 /**
  
@@ -56,6 +58,9 @@ export abstract class NodeWidget<Signals extends QWidgetSignals> extends YogaWid
     constructor(native: NativeElement) {
         super(native);
         this.actions = new Set<QAction>();
+        this.setStyleSheet = memoizeOne(this.setStyleSheet);
+        this.setInlineStyle = memoizeOne(this.setInlineStyle);
+        this.setObjectName = memoizeOne(this.setObjectName);
     }
     show(): void {
         this.native.show();
@@ -68,6 +73,18 @@ export abstract class NodeWidget<Signals extends QWidgetSignals> extends YogaWid
     }
     close(): boolean {
         return this.native.close();
+    }
+    mapFromGlobal(pos: QPoint): QPoint {
+        return new QPoint(this.native.mapFromGlobal(pos.native));
+    }
+    mapFromParent(pos: QPoint): QPoint {
+        return new QPoint(this.native.mapFromParent(pos.native));
+    }
+    mapToGlobal(pos: QPoint): QPoint {
+        return new QPoint(this.native.mapToGlobal(pos.native));
+    }
+    mapToParent(pos: QPoint): QPoint {
+        return new QPoint(this.native.mapToParent(pos.native));
     }
     setStyleSheet(styleSheet: string): void {
         const preparedSheet = StyleSheet.create(styleSheet);

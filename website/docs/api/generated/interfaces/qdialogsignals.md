@@ -10,7 +10,13 @@ sidebar_label: "QDialogSignals"
 
   ↳ **QDialogSignals**
 
+  ↳ [QColorDialogSignals](qcolordialogsignals.md)
+
   ↳ [QFileDialogSignals](qfiledialogsignals.md)
+
+  ↳ [QFontDialogSignals](qfontdialogsignals.md)
+
+  ↳ [QProgressDialogSignals](qprogressdialogsignals.md)
 
   ↳ [QMessageBoxSignals](qmessageboxsignals.md)
 

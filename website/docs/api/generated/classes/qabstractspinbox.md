@@ -23,6 +23,8 @@ It is inherited by QDateTimeEdit and QSpinBox. (n/a QDoubleSpinBox)
 
   ↳ [NodeDateTimeEdit](nodedatetimeedit.md)
 
+  ↳ [QDoubleSpinBox](qdoublespinbox.md)
+
   ↳ [QSpinBox](qspinbox.md)
 
 ## Index

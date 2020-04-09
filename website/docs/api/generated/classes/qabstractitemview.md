@@ -21,7 +21,7 @@ It is inherited by QListWidget. (n/a QColumnView, QHeaderView, QListView, QTable
 
   ↳ **QAbstractItemView**
 
-  ↳ [QListWidget](qlistwidget.md)
+  ↳ [NodeListView](nodelistview.md)
 
   ↳ [NodeTableView](nodetableview.md)
 

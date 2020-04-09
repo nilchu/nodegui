@@ -23,10 +23,17 @@ const item2 = new QTreeWidgetItem();
 item2.setText(0, `item-2`);
 const item3 = new QTreeWidgetItem();
 item3.setText(0, `item-3`);
+const item4 = new QTreeWidgetItem();
+item4.setText(0, `item-4`);
+const item5 = new QTreeWidgetItem();
+item5.setText(0, `item-5`);
+const item6 = new QTreeWidgetItem();
+item6.setText(0, `item-6`);
 
 tree.addTopLevelItem(item1);
-tree.addTopLevelItem(item2);
-tree.addTopLevelItem(item3);
+tree.insertTopLevelItems(0, [item2, item3]);
+tree.addTopLevelItems([item4, item5]);
+tree.insertTopLevelItem(2, item6);
 
 // Add children to item1
 const c1item1 = new QTreeWidgetItem(item1);
@@ -36,8 +43,7 @@ c1item2.setText(0, `c1item1`);
 
 win.setCentralWidget(tree);
 win.show();
-(global as any).win = win;
-```
+(global as any).win = win;```
 
 ## Hierarchy
 
@@ -70,9 +76,11 @@ win.show();
 * [addAction](qtreewidget.md#addaction)
 * [addEventListener](qtreewidget.md#addeventlistener)
 * [addTopLevelItem](qtreewidget.md#addtoplevelitem)
+* [addTopLevelItems](qtreewidget.md#addtoplevelitems)
 * [adjustSize](qtreewidget.md#adjustsize)
 * [close](qtreewidget.md#close)
 * [currentItem](qtreewidget.md#currentitem)
+* [findItems](qtreewidget.md#finditems)
 * [font](qtreewidget.md#font)
 * [frameRect](qtreewidget.md#framerect)
 * [frameShadow](qtreewidget.md#frameshadow)
@@ -84,6 +92,8 @@ win.show();
 * [hasMouseTracking](qtreewidget.md#hasmousetracking)
 * [hide](qtreewidget.md#hide)
 * [inherits](qtreewidget.md#inherits)
+* [insertTopLevelItem](qtreewidget.md#inserttoplevelitem)
+* [insertTopLevelItems](qtreewidget.md#inserttoplevelitems)
 * [isEnabled](qtreewidget.md#isenabled)
 * [isVisible](qtreewidget.md#isvisible)
 * [lineWidth](qtreewidget.md#linewidth)
@@ -127,6 +137,7 @@ win.show();
 * [setNodeParent](qtreewidget.md#setnodeparent)
 * [setObjectName](qtreewidget.md#setobjectname)
 * [setProperty](qtreewidget.md#setproperty)
+* [setSortingEnabled](qtreewidget.md#setsortingenabled)
 * [setStyleSheet](qtreewidget.md#setstylesheet)
 * [setVerticalScrollBarPolicy](qtreewidget.md#setverticalscrollbarpolicy)
 * [setViewport](qtreewidget.md#setviewport)
@@ -346,6 +357,20 @@ Name | Type |
 
 ___
 
+###  addTopLevelItems
+
+▸ **addTopLevelItems**(`items`: [QTreeWidgetItem](qtreewidgetitem.md)[]): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`items` | [QTreeWidgetItem](qtreewidgetitem.md)[] |
+
+**Returns:** *void*
+
+___
+
 ###  adjustSize
 
 ▸ **adjustSize**(): *void*
@@ -373,6 +398,22 @@ ___
 Returns the current item in the tree widget.
 
 **Returns:** *[QTreeWidgetItem](qtreewidgetitem.md)*
+
+___
+
+###  findItems
+
+▸ **findItems**(`text`: string, `flags`: [MatchFlag](../enums/matchflag.md), `column`: number): *[QTreeWidgetItem](qtreewidgetitem.md)[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`text` | string |
+`flags` | [MatchFlag](../enums/matchflag.md) |
+`column` | number |
+
+**Returns:** *[QTreeWidgetItem](qtreewidgetitem.md)[]*
 
 ___
 
@@ -489,6 +530,36 @@ Name | Type |
 `className` | string |
 
 **Returns:** *boolean*
+
+___
+
+###  insertTopLevelItem
+
+▸ **insertTopLevelItem**(`index`: number, `item`: [QTreeWidgetItem](qtreewidgetitem.md)): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`index` | number |
+`item` | [QTreeWidgetItem](qtreewidgetitem.md) |
+
+**Returns:** *void*
+
+___
+
+###  insertTopLevelItems
+
+▸ **insertTopLevelItems**(`index`: number, `items`: [QTreeWidgetItem](qtreewidgetitem.md)[]): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`index` | number |
+`items` | [QTreeWidgetItem](qtreewidgetitem.md)[] |
+
+**Returns:** *void*
 
 ___
 
@@ -1152,6 +1223,22 @@ Name | Type |
 `value` | [QVariantType](../globals.md#qvarianttype) |
 
 **Returns:** *boolean*
+
+___
+
+###  setSortingEnabled
+
+▸ **setSortingEnabled**(`enable`: boolean): *void*
+
+Sets if columns can be sorted by clicking on its header
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`enable` | boolean | Sorting enabled or disabled  |
+
+**Returns:** *void*
 
 ___
 

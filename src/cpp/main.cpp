@@ -13,6 +13,7 @@
 #include "QtCore/QUrl/qurl_wrap.h"
 #include "QtCore/QVariant/qvariant_wrap.h"
 #include "QtGui/QApplication/qapplication_wrap.h"
+#include "QtGui/QBrush/qbrush_wrap.h"
 #include "QtGui/QClipboard/qclipboard_wrap.h"
 #include "QtGui/QColor/qcolor_wrap.h"
 #include "QtGui/QCursor/qcursor_wrap.h"
@@ -31,19 +32,25 @@
 #include "QtWidgets/QButtonGroup/qbuttongroup_wrap.h"
 #include "QtWidgets/QCalendarWidget/qcalendarwidget_wrap.h"
 #include "QtWidgets/QCheckBox/qcheckbox_wrap.h"
+#include "QtWidgets/QColorDialog/qcolordialog_wrap.h"
 #include "QtWidgets/QComboBox/qcombobox_wrap.h"
 #include "QtWidgets/QDateEdit/qdateedit_wrap.h"
 #include "QtWidgets/QDateTimeEdit/qdatetimeedit_wrap.h"
 #include "QtWidgets/QDial/qdial_wrap.h"
 #include "QtWidgets/QDialog/qdialog_wrap.h"
+#include "QtWidgets/QDoubleSpinBox/qdoublespinbox_wrap.h"
+#include "QtWidgets/QErrorMessage/qerrormessage_wrap.h"
 #include "QtWidgets/QFileDialog/qfiledialog_wrap.h"
+#include "QtWidgets/QFontDialog/qfontdialog_wrap.h"
 #include "QtWidgets/QFrame/qframe_wrap.h"
 #include "QtWidgets/QGridLayout/qgridlayout_wrap.h"
 #include "QtWidgets/QGroupBox/qgroupbox_wrap.h"
 #include "QtWidgets/QInputDialog/qinputdialog_wrap.h"
+#include "QtWidgets/QLCDNumber/qlcdnumber_wrap.h"
 #include "QtWidgets/QLabel/qlabel_wrap.h"
 #include "QtWidgets/QLayout/qlayout_wrap.h"
 #include "QtWidgets/QLineEdit/qlineedit_wrap.h"
+#include "QtWidgets/QListView/qlistview_wrap.h"
 #include "QtWidgets/QListWidget/qlistwidget_wrap.h"
 #include "QtWidgets/QListWidgetItem/qlistwidgetitem_wrap.h"
 #include "QtWidgets/QMainWindow/qmainwindow_wrap.h"
@@ -53,6 +60,7 @@
 #include "QtWidgets/QPainter/qpainter_wrap.h"
 #include "QtWidgets/QPlainTextEdit/qplaintextedit_wrap.h"
 #include "QtWidgets/QProgressBar/qprogressbar_wrap.h"
+#include "QtWidgets/QProgressDialog/qprogressdialog_wrap.h"
 #include "QtWidgets/QPushButton/qpushbutton_wrap.h"
 #include "QtWidgets/QRadioButton/qradiobutton_wrap.h"
 #include "QtWidgets/QScrollArea/qscrollarea_wrap.h"
@@ -61,12 +69,17 @@
 #include "QtWidgets/QSlider/qslider_wrap.h"
 #include "QtWidgets/QSpinBox/qspinbox_wrap.h"
 #include "QtWidgets/QStackedWidget/qstackedwidget_wrap.h"
+#include "QtWidgets/QStandardItem/qstandarditem_wrap.h"
+#include "QtWidgets/QStandardItemModel/qstandarditemmodel_wrap.h"
 #include "QtWidgets/QStatusBar/qstatusbar_wrap.h"
 #include "QtWidgets/QSystemTrayIcon/qsystemtrayicon_wrap.h"
+#include "QtWidgets/QTabBar/qtabbar_wrap.h"
 #include "QtWidgets/QTabWidget/qtabwidget_wrap.h"
 #include "QtWidgets/QTableView/qtableview_wrap.h"
 #include "QtWidgets/QTableWidget/qtablewidget_wrap.h"
 #include "QtWidgets/QTableWidgetItem/qtablewidgetitem_wrap.h"
+#include "QtWidgets/QTextBrowser/qtextbrowser_wrap.h"
+#include "QtWidgets/QTextEdit/qtextedit_wrap.h"
 #include "QtWidgets/QTimeEdit/qtimeedit_wrap.h"
 #include "QtWidgets/QToolButton/qtoolbutton_wrap.h"
 #include "QtWidgets/QTreeWidget/qtreewidget_wrap.h"
@@ -94,6 +107,7 @@ Napi::Object Main(Napi::Env env, Napi::Object exports) {
   QTimeWrap::init(env, exports);
   QUrlWrap::init(env, exports);
   QVariantWrap::init(env, exports);
+  QBrushWrap::init(env, exports);
   QColorWrap::init(env, exports);
   QClipboardWrap::init(env, exports);
   QDialogWrap::init(env, exports);
@@ -108,12 +122,17 @@ Napi::Object Main(Napi::Env env, Napi::Object exports) {
   QStyleWrap::init(env, exports);
   QCursorWrap::init(env, exports);
   QCalendarWidgetWrap::init(env, exports);
+  QColorDialogWrap::init(env, exports);
   QComboBoxWrap::init(env, exports);
+  QDoubleSpinBoxWrap::init(env, exports);
   QBoxLayoutWrap::init(env, exports);
   QDateEditWrap::init(env, exports);
   QDateTimeEditWrap::init(env, exports);
+  QErrorMessageWrap::init(env, exports);
   QFileDialogWrap::init(env, exports);
+  QFontDialogWrap::init(env, exports);
   QFrameWrap::init(env, exports);
+  QListViewWrap::init(env, exports);
   QListWidgetWrap::init(env, exports);
   QListWidgetItemWrap::init(env, exports);
   QTableViewWrap::init(env, exports);
@@ -131,8 +150,10 @@ Napi::Object Main(Napi::Env env, Napi::Object exports) {
   QSpinBoxWrap::init(env, exports);
   QCheckBoxWrap::init(env, exports);
   QProgressBarWrap::init(env, exports);
+  QProgressDialogWrap::init(env, exports);
   QRadioButtonWrap::init(env, exports);
   QStackedWidgetWrap::init(env, exports);
+  QTabBarWrap::init(env, exports);
   QTabWidgetWrap::init(env, exports);
   QLineEditWrap::init(env, exports);
   QKeyEventWrap::init(env, exports);
@@ -140,6 +161,7 @@ Napi::Object Main(Napi::Env env, Napi::Object exports) {
   QPlainTextEditWrap::init(env, exports);
   QDialWrap::init(env, exports);
   QLabelWrap::init(env, exports);
+  QLCDNumberWrap::init(env, exports);
   QScrollAreaWrap::init(env, exports);
   QScrollBarWrap::init(env, exports);
   QSystemTrayIconWrap::init(env, exports);
@@ -150,10 +172,14 @@ Napi::Object Main(Napi::Env env, Napi::Object exports) {
   QMessageBoxWrap::init(env, exports);
   QInputDialogWrap::init(env, exports);
   QSliderWrap::init(env, exports);
+  QTextBrowserWrap::init(env, exports);
+  QTextEditWrap::init(env, exports);
   QTimeEditWrap::init(env, exports);
   QButtonGroupWrap::init(env, exports);
   QStatusBarWrap::init(env, exports);
   QSettingsWrap::init(env, exports);
+  QStandardItemModelWrap::init(env, exports);
+  QStandardItemWrap::init(env, exports);
   return exports;
 }
 

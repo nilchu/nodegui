@@ -42,6 +42,10 @@ module.exports = {
                             href: 'https://spectrum.chat/nodegui',
                         },
                         {
+                            label: 'Slack',
+                            href: 'https://nodegui.slack.com',
+                        },
+                        {
                             label: 'Twitter',
                             to: 'https://twitter.com/node_gui',
                         },
@@ -73,6 +77,11 @@ module.exports = {
         },
         googleAnalytics: {
             trackingID: 'UA-145065218-1',
+        },
+        algolia: {
+            apiKey: '0baa260ee0052fe6c974714cbf091ae1',
+            indexName: 'nodegui',
+            algoliaOptions: {}, // Optional, if provided by Algolia
         },
     },
     presets: [

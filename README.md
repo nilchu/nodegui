@@ -46,7 +46,7 @@ https://github.com/nodegui/examples
 -   🕵️‍♂️ Good Devtools support.
 -   📚 Good documentation and website.
 -   🧙‍♂️ Good documentation for contributors.
--   🦹🏻‍♀️ Good support for dark mode (Thanks to QT).
+-   🦹🏻‍♀️ Good support for dark mode (Thanks to Qt).
 -   🏅First class Typescript support. (Works on regular JS projects too 😉).
 
 ## Getting Started
@@ -148,6 +148,7 @@ People maintaining this project.
 <table>
   <tr>
     <td align="center"><a href="https://blog.atulr.com"><img src="https://avatars2.githubusercontent.com/u/4029423?v=4" width="100px;" alt="Atul R"/><br /><sub><b>Atul R</b></sub></a></td>
+     <td align="center"><a href="https://github.com/feng8848"><img src="https://avatars2.githubusercontent.com/u/40539968?v=4" width="100px;" alt=""/><br /><sub><b>feng8848</b></sub></a></td>
   </tr>
 </table>
 
